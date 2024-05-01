@@ -33,26 +33,78 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg">
 
   <style>
-    .product-container {
+ 
+.container1 {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 300px;
+ 
 }
 
-.product-row {
-  display: flex;
-  width: 100%;
-  padding-left: 8%;
-}
-
-.product-item {
-  width: 33.33%;
-  padding: 10px;
-  box-sizing: border-box;
+.image-container1 {
+  flex: 1;
   text-align: center;
 }
-.product-item img {
-  width: 300px;
+
+.image {
+  width: 100%;
   height: auto;
+  max-width: 200px;
+  border: 2px solid rgb(181, 179, 179);
+  margin-bottom: 10px;
+}
+
+.text-container1 {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: gray;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 3rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star:hover,
+.star:focus,
+.star:active {
+  color: #ffcc00;
+}
+
+.star[data-rating="1"]:hover ~ .star:not([data-rating="1"]),
+.star[data-rating="1"]:focus ~ .star:not([data-rating="1"]),
+.star[data-rating="1"]:active ~ .star:not([data-rating="1"]),
+.star[data-rating="2"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]),
+.star[data-rating="2"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]),
+.star[data-rating="2"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]),
+.star[data-rating="3"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]),
+.star[data-rating="3"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]),
+.star[data-rating="3"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]),
+.star[data-rating="4"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]),
+.star[data-rating="4"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]),
+.star[data-rating="4"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]),
+.star[data-rating="5"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]):not([data-rating="5"]),
+.star[data-rating="5"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]):not([data-rating="5"]),
+.star[data-rating="5"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]):not([data-rating="5"]) {
+  color: #ffcc00;
 }
 
 </style>
@@ -199,68 +251,35 @@
   <main>
     <article>
 
-        <div class="product-container">
-            <div class="product-row">
-              <div class="product-item">
-                <img src="./assets/images/h2.webp" alt="Product 1">
-                <p>Product 1 description</p>
-                <button>Read More</button>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/h3.webp" alt="Product 2">
-                <p>Product 2 description</p>
-                <button>Read More</button>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/h4.webp" alt="Product 3">
-                <p>Product 3 description</p>
-                <button>Read More</button>
-              </div>
+        <div class="container1">
+            <div class="image-container1">
+              <img src="/assets/images/Cerave-hydrating-toner-300x300.png" alt="Image description" class="image">
             </div>
-            
+            <div class="text-container1">
+              <h2 class="heading">Cera Ve Hydrating Toner</h2>
+              <p class="paragraph">CeraVe Hydrating Toner is a dermatologist-developed skincare product designed to provide hydration while effectively removing impurities and balancing the skin's pH levels. This toner is formulated with three essential ceramides, hyaluronic acid, and glycerin to help restore and maintain the skin's natural protective barrier. 
+               <br><b>Best for which kind of skin:</b>
+                <br> CeraVe Hydrating Toner is suitable for all skin types, including dry, normal, combination, and sensitive skin. Its gentle formula makes it particularly beneficial for those with dry or sensitive skin prone to irritation from harsher skincare products.
+                <br><b>Why use this product:</b>
+                <br>This toner serves as a crucial step in any skincare routine, as it helps to remove remaining traces of dirt, oil, and makeup after cleansing, while also replenishing the skin with essential moisture. Its hydrating properties make it an excellent choice for those seeking to boost hydration levels without compromising the skin's natural balance.
+                <br><b>Benefits:</b>               
+                <br><b>1-Hydration:</b> The inclusion of hyaluronic acid and glycerin helps to attract and retain moisture in the skin, keeping it hydrated throughout the day.
+                <br><b>2-Restores Skin Barrier:</b> Ceramides are vital for maintaining the skin barrier function, which is essential for healthy, resilient skin. This toner helps replenish ceramide levels, supporting the skin's natural defense against environmental aggressors.
+                <br><b>3-pH Balancing:</b> The toner helps to balance the skin's pH levels, which is crucial for optimal skin health. A balanced pH level promotes a healthy skin barrier and can help prevent issues such as dryness, irritation, and breakouts.
+                <br><b>4-Gentle Cleansing:</b> While effectively removing impurities, this toner is gentle on the skin, making it suitable for daily use without causing irritation or stripping the skin of its natural oils.
+                <br><b>5-Non-Comedogenic</b>: Formulated without pore-clogging ingredients, this toner is unlikely to cause acne or exacerbate existing breakouts, making it suitable for acne-prone skin as well.
+              </p>
+            </div>
+          </div>
+          <div class="rating">
+            <span class="star" data-rating="1">★</span>
+            <span class="star" data-rating="2">★</span>
+            <span class="star" data-rating="3">★</span>
+            <span class="star" data-rating="4">★</span>
+            <span class="star" data-rating="5">★</span>
+            <span class="text" text="">(4.5)</span>
           </div>
           
-        <div class="product-container">
-            <div class="product-row">
-              <div class="product-item">
-                <img src="./assets/images/h5.webp" alt="Product 1">
-                <p>Product 1 description</p>
-                <button>Read More</button>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/h6.webp" alt="Product 2">
-                <p>Product 2 description</p>
-                <button>Read More</button>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/h7.webp" alt="Product 3">
-                <p>Product 3 description</p>
-                <button>Read More</button>
-              </div>
-            </div>
-            
-          </div>
-          
-        <div class="product-container">
-            <div class="product-row">
-              <div class="product-item">
-                <img src="./assets/images/h8.webp" alt="Product 1">
-                <p>Product 1 description</p>
-                <button>Read More</button>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/h9.webp" alt="Product 2">
-                <p>Product 2 description</p>
-                <button>Read More</button>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/h10.webp" alt="Product 3">
-                <p>Product 3 description</p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <!-- Repeat the above "product-row" div for more products -->
-          </div>
 <!-- 
 - #FOOTER
   -->
@@ -270,6 +289,7 @@
 
       <div class="footer-top">
 
+ 
         <ul class="footer-list">
 
           <li>
