@@ -33,30 +33,69 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg">
 
   <style>
-    .product-container {
+ .container {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-.product-row {
+.image-container {
   display: flex;
-  width: 100%;
-  padding-left: 8%;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }
 
-.product-item {
-  width: 33.33%;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
+.text-container {
+  flex: 2;
+  margin-left: -80px;
 }
-.product-item img {
-  width: 300px;
-  height: auto;
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-.button-link {
-  text-decoration: none;
-  color: white;
+
+.paragraph {
+  font-size: 16px;
+  color: gray;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 3rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star:hover,
+.star:focus,
+.star:active {
+  color: #ffcc00;
+}
+
+.star[data-rating="1"]:hover ~ .star:not([data-rating="1"]),
+.star[data-rating="1"]:focus ~ .star:not([data-rating="1"]),
+.star[data-rating="1"]:active ~ .star:not([data-rating="1"]),
+.star[data-rating="2"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]),
+.star[data-rating="2"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]),
+.star[data-rating="2"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]),
+.star[data-rating="3"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]),
+.star[data-rating="3"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]),
+.star[data-rating="3"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]),
+.star[data-rating="4"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]),
+.star[data-rating="4"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]),
+.star[data-rating="4"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]),
+.star[data-rating="5"]:hover ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]):not([data-rating="5"]),
+.star[data-rating="5"]:focus ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]):not([data-rating="5"]),
+.star[data-rating="5"]:active ~ .star:not([data-rating="1"]):not([data-rating="2"]):not([data-rating="3"]):not([data-rating="4"]):not([data-rating="5"]) {
+  color: #ffcc00;
 }
 
 
@@ -204,90 +243,39 @@
   <main>
     <article>
 
-        <div class="product-container">
-            <div class="product-row">
-              <div class="product-item">
-                <img src="./assets/images/Cerave-hydrating-toner-300x300.png" alt="Product 1">
-                <p>Facial Moisture</p>
-                <a class="button-link" href="detail.html">
-                  <button class="button-style">Read More</button>
-                </a>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/CeraVe-PM-Facial-Moisturizing-Lotion-min-300x300.jpg" alt="Product 2">
-                <p>Product 2 description</p>
-                <a class="button-link" href="b2.html">
-                <button> Read More</button>
-              </a>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/s3.jpg" alt="Product 3">
-                <p>Product 3 description</p>
-                <a class="button-link" href="b3.html">
-                <button>Read More</button>
-              </a>
-              </div>
-            </div>
-            
-          </div>
+       <div class="container">
+    <div class="image-container">
+      <img src="assets/images/CeraVe-PM-Facial-Moisturizing-Lotion-min-300x300.jpg" alt="Image">
+    </div>
+    <div class="text-container">
+        <h2 class="heading">Cera Ve Facial Moiature</h2>
+        <p class="paragraph">CeraVe Facial Moisturizing Lotion is a lightweight, oil-free moisturizer designed to provide longevity. In addition to essential ceramides, hyaluronic acid, and MVE Technology, this lotion replenishes and locks in moisture for all-day comfort and protection. Moisturize the skin. 
+          <br><b>Best for which kind of skin:</b>
+          <br>Whether you're dealing with dryness, flaky skin, or sensitivity, incorporating CeraVe Facial Moisturizing Lotion into your daily skin care routine can help relieve these issues while increasing skin hydration.  
+          <br><b>Why use this product:</b>
+          <br>CeraVe Facial Moisturizing Lotion is a lightweight, oil-free moisturizer designed to provide longevity. In addition to essential ceramides, hyaluronic acid, and MVE Technology, this lotion replenishes and locks in moisture for all-day comfort and protection. Moisturize the skin. 
+           <br><b>Benefits:</b>               
+          <br><b>1-HYDRAULIC:</b>Enriched with hyaluronic acid (a powerful humectant), the lotion has powerful hydration on the skin and helps attract and retain moisture for plump, supple skin
+          <br><b>2-BARRIER REPAIR:</b>Formulated with ceramides and essential lipids that strengthen the skin's barrier, this lotion helps repair and strengthen the skin's protective barrier, protecting it from moisture and making it stronger against environmental aggressors.
+          <br><b>3-NOon-Oily Formula:</b>The lightweight, non-comedogenic formula is quickly absorbed into the skin without leaving an oily residue, making it suitable for daily use and layering under makeup. 
+          <br><b>4-Gentle and Non Irritating:</b>CeraVe Facial Moisturizing Lotion is free of fragrance and other potential irritants, making it gentle on the skin and suitable for even the most sensitive people. 
+          <br><b>5-Long-Lasting:</b>This lotion uses patented MVE delivery technology to continuously release moisturizing ingredients over time, providing long-lasting hydration throughout the day.
+          <br>It is indispensable for skin care, solving common problems such as dryness, sensitivity and deterioration of skin function. With its advanced formula and many benefits, it is an important complement to any skin care routine; It helps you have moisturized, nourished, good-looking and glowing skin.         
+          </p>
+      </div>
+       </div>
+      <div class="rating">
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+        <span class="text" text="">(4.5)</span>
+      </div>
           
-        <div class="product-container">
-            <div class="product-row">
-              <div class="product-item">
-                <img src="./assets/images/sa-smoothing-cream-300x300.png" alt="Product 1">
-                <p>Product 1 description</p>
-                <a class="button-link" href="b4.html">
-                <button>Read More</button>
-              </a>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/skin-renewing-eye-repair-cream-300x300.png" alt="Product 2">
-                <p>Product 2 description</p>
-                <a class="button-link" href="b5.html">
-                <button>Read More</button>
-              </a>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/s6.jpg" alt="Product 3">
-                <p>Product 3 description</p>
-                <a class="button-link" href="b6.html">
-                <button>Read More</button>
-              </a>
-              </div>
-            </div>
-            
-          </div>
-          
-        <div class="product-container">
-            <div class="product-row">
-              <div class="product-item">
-                <img src="./assets/images/s7.jpg" alt="Product 1">
-                <p>Product 1 description</p>
-                <a class="button-link" href="b7.html">
-                <button>Read More</button>
-              </a>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/s8.jpg" alt="Product 2">
-                <p>Product 2 description</p>
-                <a class="button-link" href="b8.html">
-                <button>Read More</button>
-              </a>
-              </div>
-              <div class="product-item">
-                <img src="./assets/images/Hydrating-Mineral-Sunscreen-SPF-50-Face-300x300.jpg" alt="Product 3">
-                <p>Product 3 description</p>
-                <a class="button-link" href="b9.html">
-                <button>Read More</button>
-              </a>
-              </div>
-            </div>
-            <!-- Repeat the above "product-row" div for more products -->
-          </div>
 <!-- 
 - #FOOTER
   -->
-
   <footer class="footer" data-section>
     <div class="container">
 
